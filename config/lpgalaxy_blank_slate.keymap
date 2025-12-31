@@ -2,6 +2,7 @@
  * Copyright (c) 2022 Pete Johanson
  *
  * SPDX-License-Identifier: MIT
+ * ZMK v0.1.0
  */
 
 #include <behaviors.dtsi>
