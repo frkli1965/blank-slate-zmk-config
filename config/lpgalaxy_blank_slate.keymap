@@ -2,6 +2,7 @@
  * Copyright (c) 2022 Pete Johanson
  *
  * SPDX-License-Identifier: MIT
+ * ZMK v0.3.0
  */
 
 #include <behaviors.dtsi>
@@ -11,8 +12,8 @@
 
 #define QWERTY_BASE 1
 
-#define TBLE_ORTHO   1
-//#define TBLE_MIT     1
+// #define TBLE_ORTHO   1
+#define TBLE_MIT     1
 // #define TBLE_DUAL_2U 1
 
 #define LOWER 1
@@ -85,11 +86,11 @@
 #elif defined(TBLE_MIT)
  &kp LCTRL  &kp LGUI   &kp INS    &kp LALT    &mo LOWER      &kp SPACE                       &mo RAISE      &kp LEFT    &kp UP     &kp DOWN      &kp RIGHT
 #else
- &kp LCTRL  &kp LGUI   &kp INS    &kp LALT    &mo LOWER      &kp SPACE      &kp SPACE        &mo RAISE      &kp LEFT    &kp UP     &kp DOWN      &kp RIGHT
+ &kp LCTRL  &kp LGUI   &kp INS    &kp LALT    &mo LOWER      &kp SPACE                       &kp RET        &mo RAISE   &kp LEFT   &kp UP        &kp DOWN      &kp RIGHT
 #endif
             >;
         };
-tr
+
         lower_layer {
             label = "Lower";
             bindings = <
@@ -101,7 +102,7 @@ tr
 #elif defined(TBLE_MIT)
 &trans      &trans     &kp K_LOCK &kp RALT    &trans         &trans                          &trans         &kp N0      &kp KP_DOT &none         &kp KP_NUM
 #else
-&trans      &trans     &trans     &trans      &trans         &trans         &trans           &trans         &trans      &trans     &trans        &trans
+&trans      &trans     &trans     &trans      &trans         &trans                          &trans         &trans      &trans     &trans        &trans        &trans
 #endif
             >;
         };
@@ -117,7 +118,7 @@ tr
 #elif defined(TBLE_MIT)
 &trans     &trans      &kp K_LOCK &trans      &trans         &trans                          &trans         &kp HOME    &kp PG_UP  &kp PG_DN     &kp END
 #else
-&trans     &trans      &kp K_LOCK &trans      &trans         &trans         &trans           &trans         &kp HOME    &kp PG_UP  &kp PG_DN     &kp END
+&trans     &trans      &trans     &kp N0      &trans         &none                           &none          &kp ESC     &kp DEL    &trans        &trans        &trans
 #endif
             >;
         };
