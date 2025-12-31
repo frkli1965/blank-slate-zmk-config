@@ -2,7 +2,7 @@
  * Copyright (c) 2022 Pete Johanson
  *
  * SPDX-License-Identifier: MIT
- * ZMK v0.1.0
+ * ZMK v0.3.0
  */
 
 #include <behaviors.dtsi>
@@ -75,7 +75,7 @@
 #ifdef QWERTY_BASE
  &kp ESC    &kp Q      &kp W      &kp E       &kp R          &kp T          &kp Y            &kp U          &kp I       &kp O      &kp P         &kp BKSP
  &kp TAB    &kp A      &kp S      &kp D       &kp F          &kp G          &kp H            &kp J          &kp K       &kp L      &kp SEMI      &kp RET
- &kp LSHFT  &kp Z      &kp X      &kp C       &kp V          &kp B          &kp N            &kp M          &kp COMMA   &kp DOT    &kp FSLH      &kp RET
+ &kp LSHFT  &kp Z      &kp X      &kp C       &kp V          &kp B          &kp N            &kp M          &kp COMMA   &kp UP     &kp DOT       &kp RET
 #else
  &kp ESC    &kp Q      &kp W      &kp F       &kp P          &kp B          &kp J            &kp L          &kp U       &kp Y      &kp QUOT      &kp BKSP
  &kp TAB    &kp A      &kp R      &kp S       &kp T          &kp G          &kp M            &kp N          &kp E       &kp I      &kp O         &kp RET
@@ -84,7 +84,7 @@
 #ifdef TBLE_DUAL_2U
  &kp LCTRL  &kp LGUI   &kp LALT   &mo LOWER   &shifty        &kp SPACE                       &mo RAISE      &kp LALT    &kp RGUI   &kp RSHIFT
 #elif defined(TBLE_MIT)
- &kp LCTRL  &kp LGUI   &kp INS    &kp LALT    &mo LOWER      &kp SPACE                       &mo RAISE      &kp LEFT    &kp UP     &kp DOWN      &kp RIGHT
+ &kp LCTRL  &kp LGUI   &kp INS    &kp LALT    &mo LOWER      &kp SPACE                       &mo RAISE      &kp LEFT    &kp DOWN   &kp RIGHT     &none
 #else
  &kp LCTRL  &kp LGUI   &kp INS    &kp LALT    &mo LOWER      &kp SPACE                       &kp RET        &mo RAISE   &kp LEFT   &kp UP        &kp DOWN      &kp RIGHT
 #endif
@@ -96,7 +96,7 @@
             bindings = <
 &kp GRAVE   &kp N1     &kp N2     &kp N3      &kp N4         &kp N5         &kp N6           &kp N7         &kp N8      &kp N9     &kp N0        &kp DEL
 &kp CAPS    &kp MINUS  &kp EQUAL  &kp LBKT    &kp RBKT       &none          &kp KP_DIVIDE    &kp N4         &kp N5      &kp N6     &kp KP_MINUS  &trans
-&trans      &kp APOS   &kp NUHS   &kp BSLH    &none          &none          &kp KP_MULTIPLY  &kp N1         &kp N2      &kp N3     &kp KP_PLUS   &trans
+&trans      &kp APOS   &kp NUHS   &kp BSLH    &kp FSLH       &none          &kp KP_MULTIPLY  &kp N1         &kp N2      &kp N3     &kp KP_PLUS   &trans
 #ifdef TBLE_DUAL_2U
 &trans      &trans     &trans     &trans      &trans         &trans                          &trans         &trans      &trans     &trans
 #elif defined(TBLE_MIT)
