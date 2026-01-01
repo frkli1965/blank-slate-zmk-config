@@ -84,7 +84,7 @@
 #ifdef TBLE_DUAL_2U
  &kp LCTRL  &kp LGUI   &kp LALT   &mo LOWER   &shifty        &kp SPACE                       &mo RAISE      &kp LALT    &kp RGUI   &kp RSHIFT
 #elif defined(TBLE_MIT)
- &kp LCTRL  &kp LGUI   &kp INS    &kp LALT    &mo LOWER      &kp SPACE                       &mo RAISE      &kp LEFT    &kp DOWN   &kp RIGHT     &kp RIGHT
+ &kp LCTRL  &kp LGUI   &kp INS    &kp LALT    &mo LOWER      &kp SPACE                       &mo RAISE      &kp LEFT    &kp DOWN   &kp RIGHT     &none
 #else
  &kp LCTRL  &kp LGUI   &kp INS    &kp LALT    &mo LOWER      &kp SPACE                       &kp RET        &mo RAISE   &kp LEFT   &kp UP        &kp DOWN      &kp RIGHT
 #endif
@@ -126,15 +126,15 @@
         adjust_layer {
             label = "Adjust";
             bindings = <
-&trans     &kp LBRC    &kp AMPS   &kp STAR    &kp LPAR       &kp RBRC       &trans           &trans         &trans      &trans     &trans        &bootloader
-&trans     &kp COLON   &kp DLLR   &kp PRCNT   &kp CARET      &kp PLUS       &trans           &trans         &trans      &trans     &trans        &trans
-&trans     &kp TILDE   &kp EXCL   &kp AT      &kp HASH       &kp PIPE       &trans           &trans         &trans      &trans     &trans        &trans
+&trans     &bootloader &reset     &trans      &trans         &trans         &trans         &trans           &trans      &trans     &trans        &trans
+&trans     &trans      &trans     &trans      &trans         &trans         &trans         &trans           &trans      &trans     &trans        &trans
+&trans     &trans      &trans     &trans      &trans         &trans         &trans         &trans           &trans      &trans     &trans        &trans
 #ifdef TBLE_DUAL_2U
-&trans     &trans     &trans      &kp RPAR    &trans         &trans                          &trans         &trans      &trans     &trans
+&trans     &trans     &trans      &kp RPAR    &trans         &trans                        &trans           &trans      &trans     &trans
 #elif defined(TBLE_MIT)
-&trans     &trans     &trans      &kp RPAR    &trans         &trans                          &trans         &trans      &trans     &trans        &trans
+&trans     &trans     &trans      &kp RPAR    &trans         &trans                        &trans           &trans      &trans     &trans        &trans
 #else
-&trans     &trans     &trans      &kp RPAR    &trans         &trans                          &trans         &trans      &trans     &trans        &trans        &trans
+&trans     &trans     &trans      &kp RPAR    &trans         &trans                        &trans           &trans      &trans     &trans        &trans        &trans
 #endif
             >;
         };
