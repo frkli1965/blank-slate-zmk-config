@@ -126,7 +126,7 @@
         adjust_layer {
             label = "Adjust";
             bindings = <
-&trans     &bootloader &reset     &trans      &trans         &trans         &trans         &trans           &trans      &trans     &trans        &trans
+&trans     &bootloader &trans     &trans      &trans         &trans         &trans         &trans           &trans      &trans     &trans        &trans
 &trans     &trans      &trans     &trans      &trans         &trans         &trans         &trans           &trans      &trans     &trans        &trans
 &trans     &trans      &trans     &trans      &trans         &trans         &trans         &trans           &trans      &trans     &trans        &trans
 #ifdef TBLE_DUAL_2U
