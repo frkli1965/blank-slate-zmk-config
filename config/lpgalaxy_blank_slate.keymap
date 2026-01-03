@@ -80,7 +80,7 @@
   &trans    &bootloader &trans     &trans      &trans     &trans       &trans          &trans     &trans     &trans     &trans       &trans
   &trans    &trans      &trans     &trans      &trans     &trans       &trans          &trans     &trans     &trans     &trans       &trans
   &trans    &trans      &trans     &trans      &trans     &trans       &trans          &trans     &trans     &trans     &trans       &trans
-  &trans    &trans      &trans     &kp RPAR    &trans     &trans                       &trans     &trans     &trans     &trans       &trans
+  &trans    &trans      &trans     &trans      &trans     &trans                       &trans     &trans     &trans     &trans       &trans
             >;
         };
     };
